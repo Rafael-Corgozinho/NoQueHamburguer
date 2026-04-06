@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NóQueHamburguer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+
+        <style>
+        /* Suaviza o movimento de scroll ao clicar nos links internos */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <header class="navbar">
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="logo-container">
+            <div class="logo-circle">
+                <img src="logo.jpeg" alt="Logomarca NóQueHamburguer" class="logo-img">
+            </div>
+        </div>
+
+        <div class="header-social">
+            <a href=" https://www.instagram.com/noquehamburguer?igsh=czhuajIwa2d5c2sz&utm_source=ig_contact_invite"><img
+                    src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#hamburgueres">Hambúrgueres</a></li>
+            <li><a href="#combos">Combos</a></li>
+            <li><a href="#bebidas">Bebidas</a></li>
+        </ul>
+    </nav>
+    <div class="overlay"></div>
+
+
+    <main id="home">
+        <section class="hero-section">
+            <div class="hero-image-wrapper">
+                <img src="central.jpeg.jpeg" alt="Hamburguer" class="hero-circle-img">
+            </div>
+
+            <div class="action-buttons">
+                <a href="#combos" class="btn-outline">COMBOS</a>
+                <a href="#bebidas" class="btn-outline">BEBIDAS</a>
+                <a href="#hamburgueres" class="btn-outline">HAMBURGUERES</a>
+            </div>
+        </section>
+
+        <section id="hamburgueres" class="menu-category-container">
+            <div class="section-badge-container">
+                <div class="section-badge">HAMBÚRGUERES</div>
+            </div>
+            <div class="menu-list">
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Uai</h3>
+                        <p>Pão brioche selado na manteiga, suculento hambúrguer artesanal bovino 100g e um delicioso
+                            cheddar cremoso. R$ 19,99</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="uai.jpeg" alt="Uai">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Bão</h3>
+                        <p>Pão brioche selado na manteiga, suculento hambúrguer artesanal de 100g, queijo cheddar
+                            derretido, alface, tomate e molho da casa</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="bão.jpeg" alt="Bão">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Procêvê</h3>
+                        <p>Pão brioche selado na manteiga, suculento hambúrguer artesanal de 100g, queijo cheddar
+                            derretido, bacon fatiado, alface, tomate e molho da casa</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="proceve.jpeg" alt="Procêvê">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Trem Bão</h3>
+                        <p>Pão brioche selado na manteiga, 2 suculentos hambúrgueres artesanais de 100g, 2 queijo
+                            cheddar derretido, bacon fatiado, ovo, alface, tomate e molho da casa</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="trembão.jpeg" alt="Trem Bão">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Cadin</h3>
+                        <p>Pão brioche selado na manteiga, suculento hambúrguer artesanal de 150g, queijo cheddar
+                            derretido, alface, tomate e molho da casa</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="cadin.jpeg" alt="Cadin">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Zé Dend'água</h3>
+                        <p>Pão brioche selado na manteiga, suculento hambúrguer artesanal de 150g, queijo cheddar
+                            derretido, bacon fatiado, alface, tomate e molho da casa</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="ZeDenDagua.jpeg" alt="Zé Dend'água">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Tem Cabimento</h3>
+                        <p>Pão brioche selado na manteiga, 2 suculentos hambúrgueres artesanais 150g, 2 queijo cheddar
+                            derretido, bacon fatiado, alface, tomate, cebola rocha, picles e molho da casa</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="TemCabimento.jpeg" alt="Tem Cabimento">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Viaja Ni Mim</h3>
+                        <p>Pão brioche selado na manteiga, 3 suculentos hambúrgueres artesanais 150g, 3 queijo cheddar
+                            derretido, bacon fatiado, cheddar cremoso, anéis de cebola, alface e tomate e molho da casa
+                        </p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="central.jpeg.jpeg" alt="Viaja Ni Mim">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="combos" class="menu-category-container">
+            <div class="section-badge-container">
+                <div class="section-badge">COMBOS</div>
+            </div>
+            <div class="menu-list">
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Combo Uai</h3>
+                        <p>Delicioso hambúrguer Uai + Refri lata 350ml + fritas R$ 29,99</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="comobouai.jpeg" alt="Combo Uai">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Combo Bão</h3>
+                        <p>Delicioso Hambúrguer Bão + Refri lata 350ml + fritas grátis</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="combobao.jpeg" alt="Combo Bão">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Combo Procêvê</h3>
+                        <p>Delicioso Hambúrguer Procêvê + Refri lata 350ml + fritas grátis</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="comboproceve.jpeg" alt="Combo Procêvê">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Combo Trem Bão</h3>
+                        <p>Delicioso Hambúrguer Trem Bão + Refri lata 350ml + fritas grátis</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="combotrembao.jpeg" alt="Combo Trem Bão">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Combo Cadin</h3>
+                        <p>Delicioso Hambúrguer Cadin + fritas P + Refri lata 350ml</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="combocadin.jpeg" alt="Combo Cadin">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Combo Zédend'água</h3>
+                        <p>Delicioso Hambúrguer Zédend'água + Refri lata 350ml + fritas grátis</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="combozedendagua.jpeg" alt="Combo Zédend'água">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Combo Tem Cabimento</h3>
+                        <p>Delicioso Hambúrguer Tem Cabimento + Refri lata 350ml + fritas grátis</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="combotemcabimento.jpeg" alt="Combo Tem Cabimento">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Combo Viaja Ni Mim</h3>
+                        <p>Delicioso Hambúrguer Viaja Ni Mim + Refri lata 350ml + fritas grátis</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="comboviaja.jpeg" alt="Combo Viaja Ni Mim">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Combo Casal Procêvê</h3>
+                        <p>2 Deliciosos Hambúrgueres Procêvê + 1 Mate couro 1l + fritas grátis</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="casalproceve.jpeg" alt="Combo Casal Procêvê">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Combo Casal Tem Cabimento</h3>
+                        <p>2 Deliciosos Hambúrgueres Tem Cabimento + 2 Refri lata 350ml + fritas grátis</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="casalcabimento.jpeg" alt="Combo Casal Tem Cabimento">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="bebidas" class="menu-category-container">
+            <div class="section-badge-container">
+                <div class="section-badge">BEBIDAS</div>
+            </div>
+            <div class="menu-list">
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Coca-Cola Lata</h3>
+                        <p>Lata 350ml</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="coca_lata.jpeg" alt="Coca-Cola Lata">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Coca Cola Zero Lata</h3>
+                        <p>Lata 350ml</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="coca_lata_SemAcucar.jpeg" alt="Coca Cola Zero Lata">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Fanta Laranja Lata</h3>
+                        <p>Lata 350ml</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="fanta laranja lata.jpeg" alt="Fanta Laranja Lata">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Coca Cola 2l</h3>
+                        <p>Garrafa 2 Litros</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="coca2L.jpeg" alt="Coca Cola 2l">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Fanta Laranja 2 L</h3>
+                        <p>Garrafa 2 Litros</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="Fanta2L.jpeg" alt="Fanta Laranja 2l">
+                    </div>
+                </article>
+                <article class="menu-card row-reverse">
+                    <div class="card-info">
+                        <h3>Guaraná Mate Couro</h3>
+                        <p>Garrafa 1 Litro</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="MateCouro1L.jpeg" alt="Mate Couro 1l">
+                    </div>
+                </article>
+                <article class="menu-card row-normal">
+                    <div class="card-info">
+                        <h3>Água Mineral Viva com Gás</h3>
+                        <p>Garrafa 500ml</p>
+                        <a href="https://www.ifood.com.br/delivery/betim-mg/no-que-hamburguer-imbirucu/19af9f52-19a1-49e5-b433-0acdc73f87f0?UTM_Medium=share" class="btn-solid">PEÇA AGORA</a>
+                    </div>
+                    <div class="card-img">
+                        <img src="aguacomgas" alt="Água Mineral com Gás">
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="contato">
+        <div class="footer-info">
+            <p class="destaque-rodape">• Nó que hamburguer•</p>
+            <p>Terça a sexta: 19h às 22h</p>
+            <p>Sábado: 18:00h às 23:00h</p>
+            <p>Domingo: 19:00h às 22h</p>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/noquehamburguer?igsh=czhuajIwa2d5c2sz&utm_source=ig_contact_invite" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/5537900000000" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+/* Variáveis de Cores e Fontes - Padrão Meka Burguer */
+:root {
+    --bg-dark: #e69b10e8;      /* Marrom escuro (Cabeçalho, rodapé e fundo da seção 2) */
+    --bg-main: #9c4a2f;      /* Marrom claro/avermelhado (Fundo da seção 1) */
+    --logo-orange: #e84d1b;  /* Laranja do logo */
+    --text-yellow: #f5b800;  /* Amarelo dos títulos */
+    --text-tan: #dac09b;     /* Bege/Dourado claro (Bordas, botões, textos secundários) */
+    --btn-bg: #853e24;       /* Fundo dos botões vazados */
+    --text-dark: #2a0a05;    /* Texto escuro para botões sólidos */
+    --font-main: 'Poppins', sans-serif;
+    --font-title: 'Oswald', sans-serif; /* Fonte condensada para botões/logo */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Cabeçalho */
+.navbar {
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    z-index: 100;
+    height: 70px;
+    border-bottom: 2px dashed rgba(255,255,255,0.2);
+}
+
+/* Menu Hamburguer */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 101;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--bg-main);
+    border-radius: 2px;
+}
+
+/* Ícones Sociais no Header */
+.header-social {
+    display: flex;
+    gap: 15px;
+}
+
+.header-social img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(21%) saturate(1450%) hue-rotate(334deg) brightness(93%) contrast(89%); /* Tom marrom avermelhado */
+}
+
+/* Logo Centralizado e Sobreposto */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 110;
+}
+
+.logo-circle {
+    width: 90px;
+    height: 90px;
+    background-color: var(--logo-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-dark);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.logo-text {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    line-height: 1;
+    text-align: center;
+    color: var(--bg-dark);
+    transform: scaleY(1.2); /* Efeito condensado/esticado */
+}
+
+/* Seção Hero (Fundo Marrom Claro) */
+.hero-section {
+    background-color: var(--bg-main);
+    padding: 4rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagem Circular */
+.hero-image-wrapper {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.3);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.hero-circle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botões de Ação (Promoções/Combos) */
+.action-buttons {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-outline {
+    background-color: var(--btn-bg);
+    color: var(--bg-dark);
+    border: 2px solid white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Seção Promoções (Fundo Marrom Escuro) */
+.promo-section {
+    background-color: var(--bg-dark);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-top: 2px dashed rgba(255,255,255,0.2);
+}
+
+/* Badge Superior da Seção */
+.section-badge-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -3rem; /* Sobe para ficar na divisa */
+    margin-bottom: 2rem;
+}
+
+.section-badge {
+    background-color: #5d1e11;
+    color: #9c3c22;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 30px;
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Título Amarelo */
+.section-title {
+    color: var(--text-yellow);
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+
+
+/* Layout Texto Esquerda / Imagem Direita */
+/* --- LÓGICA DO CARROSSEL DE PROMOÇÕES --- */
+
+.promo-content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 250px; /* Evita que a seção mude de tamanho se as imagens forem diferentes */
+    margin-bottom: 2rem;
+}
+
+/* Estado padrão do slide (Oculto) */
+.slide {
+    display: none; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Estado ativo do slide (Visível) */
+.slide.active {
+    display: flex;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Área de Imagem dentro do slide */
+.promo-image-area {
+    flex: 1.2;
+}
+
+.promo-image-area img {
+    width: 100%;
+    height: auto;
+    border: 5px solid var(--text-tan);
+    object-fit: cover;
+    border-radius: 8px; /* Opção: cantos arredondados na imagem da promo */
+}
+
+/* Estilização das Bolinhas (Dots) */
+.dots-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    cursor: pointer;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #5d1e11; /* Cor inativa */
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--text-tan); /* Cor ativa */
+    transform: scale(1.2);
+}
+
+/* --- ADIÇÕES E CORREÇÕES --- */
+
+/* Estilo para a imagem da Logo */
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Mantém o formato circular */
+}
+
+/* Ajuste para o botão PEÇA AGORA (Tag A) */
+.btn-solid {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--text-tan);
+    color: var(--text-dark);
+    border: none;
+    padding: 8px 15px;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Estilos da Sidebar e Overlay (Menu Lateral) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: var(--bg-dark);
+    padding-top: 80px;
+    transition: 0.3s ease;
+    z-index: 105; /* Acima do header */
+    border-right: 2px solid var(--text-tan);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-family: var(--font-title);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--btn-bg);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 104;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- ESTILOS DOS CARDS DO CARDÁPIO (Baseado na referência) --- */
+
+.menu-category-container {
+    background-color: var(--bg-dark);
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    margin: 4rem auto 2rem;
+    padding: 2rem 1.5rem;
+    position: relative;
+    max-width: 900px; /* Limita a largura máxima para manter o design focado */
+    width: 90%;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.menu-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+/* Alternância de posições */
+.row-normal {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Área de Texto */
+.card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-info h3 {
+    color: var(--text-yellow);
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.card-info p {
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+/* Área da Imagem */
+.card-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 4px solid var(--text-tan);
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Responsividade: em telas pequenas as colunas empilham */
+@media (max-width: 650px) {
+    .menu-card, .menu-card.row-reverse {
+        flex-direction: column;
+    }
+    
+    .card-img {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+footer {
+    background-color: var(black);
+    color: var(--text-light);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.destaque-rodape {
+    font-weight: 700;
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem !important;
+    color: var(--bg-color);
+}
+
+.endereco {
+    margin-top: 1.5rem !important;
+    font-size: 0.85rem !important;
+    color: #ccc;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.nav-arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Torna o botão uma bolinha */
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-arrow {
+    left: 10px; /* Distância da margem esquerda */
+}
+
+.next-arrow {
+    right: 10px; /* Distância da margem direita */
+}
+
+/* Garante que o container interno não sobreponha as setas */
+.carousel-container {
+    width: 80%;
+    overflow: hidden;
+}
